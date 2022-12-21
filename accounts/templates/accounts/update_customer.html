@@ -1,0 +1,23 @@
+{%  extends 'accounts/main.html' %}
+{% load static %}
+{% block content %}
+<br>
+<div class="row"></div>
+<div class="col-md-6 "> 
+<div class="card card-body">
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <label for="name">Name</label> <input type="text" name="name" id="name" value="{{customer.name}}">
+    <label for="email">Email</label> <input type="email" name="email"  id="email" value="{{customer.email}}"><br>
+    <label for="phone">phone</label> <input type="text" name="phone"  id="phone" value="{{customer.phone}}">
+    <input class="btn btn-sm btn-info" type="submit" name="submit" >
+</form>
+
+{{name}}
+{{email}}
+</div>
+</div>
+</div>
+
+{% endblock %}
